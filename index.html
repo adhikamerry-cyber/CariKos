@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lomang Cari Kos - Temukan Kos Impianmu di Bali</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- A. Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#beranda" class="logo">
+                <img src="kelomang.png" alt="Logo Lomang Cari Kos" class="logo-img">
+                <span class="logo-text">Lomang Cari Kos</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#cari-kos">Cari Kos</a></li>
+                <li><a href="#cara-kerja">Cara Kerja</a></li>
+                <li><a href="#favorit">Favorit</a></li>
+            </ul>
+            <div class="nav-auth">
+                <a href="#akun" class="btn btn-outline">Masuk</a>
+                <a href="#akun" class="btn btn-primary">Daftar</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- B. Hero Section -->
+    <header id="beranda" class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>Temukan Kos Impianmu di Bali.</h1>
+                <p>Cari kos sesuai budget, bandingkan fasilitas, dan rencanakan tempat tinggalmu sebelum tiba di Bali.</p>
+                
+                <form class="hero-search">
+                    <div class="search-group">
+                        <label>Lokasi</label>
+                        <input type="text" placeholder="Cari Denpasar, Badung...">
+                    </div>
+                    <div class="search-group">
+                        <label>Budget</label>
+                        <select>
+                            <option>Semua Harga</option>
+                            <option>< Rp 1 Juta</option>
+                            <option>Rp 1 - 2 Juta</option>
+                            <option>> Rp 2 Juta</option>
+                        </select>
+                    </div>
+                    <div class="search-group">
+                        <label>Tipe</label>
+                        <select>
+                            <option>Campur</option>
+                            <option>Putra</option>
+                            <option>Putri</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-search">Cari Kos</button>
+                </form>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=600&q=80" alt="Suasana Bali">
+            </div>
+        </div>
+    </header>
+
+    <!-- C. Pilihan Lokasi Populer -->
+    <section id="lokasi" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Lokasi Populer di Bali</h2>
+                <p>Pilih area kos yang paling dekat dengan aktivitasmu.</p>
+            </div>
+            <div class="grid location-grid">
+                <div class="location-card">
+                    <img src="Screenshot 2026-10-20 113330.png" alt="Denpasar">
+                    <div class="location-info">
+                        <h3>Denpasar</h3>
+                        <a href="#cari-kos" class="btn btn-sm btn-light">Lihat Kos</a>
+                    </div>
+                </div>
+                <div class="location-card">
+                    <img src="Screenshot 2026-10-20 113430.png" alt="Badung">
+                    <div class="location-info">
+                        <h3>Badung</h3>
+                        <a href="#cari-kos" class="btn btn-sm btn-light">Lihat Kos</a>
+                    </div>
+                </div>
+                <div class="location-card">
+                    <img src="unmas.jpeg" alt="Area Kampus">
+                    <div class="location-info">
+                        <h3>Area Kampus</h3>
+                        <a href="#cari-kos" class="btn btn-sm btn-light">Lihat Kos</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- E. Fitur Pencarian dan Filter -->
+    <section id="cari-kos" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Cari Kos Idealmu</h2>
+                <p>Gunakan filter di bawah ini untuk menemukan kos yang paling sesuai.</p>
+            </div>
+            <div class="filter-bar">
+                <div class="filter-item">
+                    <label>Rentang Harga</label>
+                    <div class="price-inputs">
+                        <input type="number" placeholder="Min (Rp)">
+                        <span>-</span>
+                        <input type="number" placeholder="Max (Rp)">
+                    </div>
+                </div>
+                <div class="filter-item">
+                    <label>Fasilitas</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox"> AC</label>
+                        <label><input type="checkbox"> WiFi</label>
+                        <label><input type="checkbox"> Kamar Mandi Dalam</label>
+                    </div>
+                </div>
+                <div class="filter-item">
+                    <label>Ketersediaan</label>
+                    <select><option>Semua</option><option>Tersedia Sekarang</option></select>
+                </div>
+                <div class="filter-item">
+                    <label>Status</label>
+                    <select><option>Semua</option><option>Pemilik Terverifikasi</option></select>
+                </div>
+                <div class="filter-item">
+                    <label>Urutkan</label>
+                    <select><option>Harga Terendah</option><option>Harga Tertinggi</option></select>
+                </div>
+            </div>
+
+            <!-- D. Rekomendasi Kos (Hasil Pencarian) -->
+            <div class="grid kos-grid">
+                <!-- Card 1 -->
+                <div class="kos-card">
+                    <div class="kos-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=400&q=80" alt="Kos Mawar">
+                        <div class="badges">
+                            <span class="badge verified">✓ Terverifikasi</span>
+                            <span class="badge type-putri">Putri</span>
+                        </div>
+                        <button class="btn-fav">❤</button>
+                    </div>
+                    <div class="kos-info">
+                        <div class="kos-price">Rp 1.500.000 <span>/ bulan</span></div>
+                        <h3 class="kos-title">Kos Mawar Eksklusif</h3>
+                     <p class="kos-location">
+                            <img src="lokasi.png" alt="Ikon Lokasi" class="ikon-lokasi"> Nusa Dua
+                     </p>
+                        <div class="kos-facilities">
+                            <span>
+                                 AC</span><span>WiFi</span><span> K. Mandi Dalam</span>
+                        </div>
+                        <div class="kos-status">Sisa 2 Kamar</div>
+                        <a href="#detail-kos" class="btn btn-outline btn-full">Lihat Detail</a>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="kos-card">
+                    <div class="kos-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=400&q=80" alt="Kos Bima">
+                        <div class="badges">
+                            <span class="badge verified">✓ Terverifikasi</span>
+                            <span class="badge type-putra">Putra</span>
+                        </div>
+                        <button class="btn-fav">❤</button>
+                    </div>
+                    <div class="kos-info">
+                        <div class="kos-price">Rp 1.200.000 <span>/ bulan</span></div>
+                        <h3 class="kos-title">Kos Bima Raya</h3>
+                        <p class="kos-location">
+                            <img src="lokasi.png" alt="Ikon Lokasi" class="ikon-lokasi"> Badung
+                        </p>
+                        <div class="kos-facilities">
+                            <span> WiFi</span><span> Kasur</span><span> Parkir Luas</span>
+                        </div>
+                        <div class="kos-status">Tersedia</div>
+                        <a href="#detail-kos" class="btn btn-outline btn-full">Lihat Detail</a>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="kos-card">
+                    <div class="kos-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=400&q=80" alt="Kos Campur">
+                        <div class="badges">
+                            <span class="badge type-campur">Campur</span>
+                        </div>
+                        <button class="btn-fav">❤</button>
+                    </div>
+                    <div class="kos-info">
+                        <div class="kos-price">Rp 2.000.000 <span>/ bulan</span></div>
+                        <h3 class="kos-title">Nusa Dua Residence</h3>
+                         <p class="kos-location">
+                            <img src="lokasi.png" alt="Ikon Lokasi" class="ikon-lokasi"> Denpasar
+                        </p>
+                        <div class="kos-facilities">
+                            <span> AC</span><span> WiFi</span><span> Dapur</span>
+                        </div>
+                        <div class="kos-status alert">Penuh</div>
+                        <a href="#detail-kos" class="btn btn-outline btn-full">Lihat Detail</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- F. Detail Kos (Mockup Halaman Detail) -->
+    <section id="detail-kos" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Tampilan Detail Properti</h2>
+            </div>
+            <div class="detail-layout">
+                <div class="detail-gallery">
+                    <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=800&q=80" alt="Kamar Utama" class="main-img">
+                    <div class="thumbnail-grid">
+                        <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=200&q=80" alt="Dapur">
+                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=200&q=80" alt="Kamar Mandi">
+                        <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=200&q=80" alt="Fasilitas">
+                    </div>
+                </div>
+                <div class="detail-content">
+                    <div class="detail-header">
+                        <h1>Kos Mawar Eksklusif</h1>
+                        <span class="badge verified">✓ Pemilik Terverifikasi</span>
+                    </div>
+                   <p class="kos-location">
+                            <img src="lokasi.png" alt="Ikon Lokasi" class="ikon-lokasi"> Kuta Selatan, Bali (dekat kampus UNUD)
+                        </p>
+                   <div class="detail-rating">
+                        <img src="starpng.png" alt="Bintang" class="ikon-bintang-detail">
+                        <span class="angka-rating">4.8</span>
+                        <span class="jumlah-ulasan">(12 Ulasan)</span>
+                    </div>
+                    <div class="detail-price">
+                        <h2>Rp 1.500.000 <span>/ bulan</span></h2>
+                        <span class="availability">Sisa 2 Kamar</span>
+                    </div>
+                    <div class="detail-desc">
+                        <h3>Deskripsi</h3>
+                        <p>Kos nyaman dengan desain modern, cocok untuk mahasiswa dan pekerja. Lingkungan aman dan tenang, akses kunci 24 jam.</p>
+                    </div>
+                    <div class="detail-facilities">
+                        <h3>Fasilitas Kamar</h3>
+                        <ul>
+                            <li> AC</li>
+                            <li> WiFi (100 Mbps)</li>
+                            <li> Kamar Mandi Dalam (Water Heater)</li>
+                            <li> Kasur Springbed + Lemari Pakaian</li>
+                        </ul>
+                    </div>
+                    <details class="detail-rules">
+                        <summary>Aturan Penghuni</summary>
+                        <ul>
+                            <li>Dilarang membawa hewan peliharaan.</li>
+                            <li>Tamu maksimal berkunjung hingga pukul 23.00 WITA.</li>
+                            <li>Dilarang merokok di dalam kamar.</li>
+                        </ul>
+                    </details>
+                    <details class="detail-rules">
+                        <summary>Informasi Pemilik</summary>
+                        <div class="owner-info">
+                            <div class="owner-avatar">IB</div>
+                            <div>
+                                <p><strong>Ibu Made</strong></p>
+                                <p>Bergabung sejak 2024 • Merespons dalam 1 jam</p>
+                            </div>
+                        </div>
+                    </details>
+                    <button class="btn btn-primary btn-booking">Booking Sekarang</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- G. Cara Kerja -->
+    <section id="cara-kerja" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Cara Kerja Lomang Cari Kos</h2>
+                <p>Mudah, cepat, dan aman. Pesan kos idamanmu dalam 5 langkah.</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Cari Kos</h3>
+                    <p>Masukkan lokasi dan atur budget sesuai kebutuhanmu.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Bandingkan</h3>
+                    <p>Bandingkan foto, harga, dan fasilitas dari berbagai pilihan.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Periksa Detail</h3>
+                    <p>Pastikan ketersediaan kamar dan status verifikasi pemilik.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3>Booking</h3>
+                    <p>Pilih kos dan lakukan booking via sistem terintegrasi.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">5</div>
+                    <h3>Check-in</h3>
+                    <p>Konfirmasi jadwal dan langsung check-in setiba di Bali.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- H. Keamanan dan Kepercayaan -->
+    <section id="trust" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Kenapa Memilih Lomang?</h2>
+                <p>Kami memprioritaskan keamanan dan transparansi untuk perantau.</p>
+            </div>
+            <div class="grid trust-grid">
+                <div class="trust-card">
+                    <div class="trust-icon">
+                        <img src="shield.png" alt="Ikon Perisai">
+                    </div>
+                    <h3>Pemilik Terverifikasi</h3>
+                    <p>Setiap pemilik kos melewati proses verifikasi data untuk menghindari penipuan properti fiktif.</p>
+                </div>
+                <div class="trust-card">
+                     <div class="trust-icon">
+                        <img src="update.png" alt="Ikon Update">
+                    </div>
+                    <h3>Data Selalu Update</h3>
+                    <p>Informasi harga dan fasilitas diperbarui berkala setiap tiga bulan oleh tim kami.</p>
+                </div>
+                <div class="trust-card">
+                     <div class="trust-icon">
+                        <img src="payment.png" alt="Ikon Payment">
+                    </div>
+                    <h3>Transaksi Terstruktur</h3>
+                    <p>Mekanisme pembayaran terintegrasi dengan penahanan dana hingga konfirmasi check-in (segera hadir).</p>
+                </div>
+                <div class="trust-card">
+                     <div class="trust-icon">
+                        <img src="starpng.png" alt="Ikon Bintang">
+                    </div>
+                    <h3>Ulasan Asli</h3>
+                    <p>Rating dan ulasan hanya dapat diberikan oleh penghuni yang telah melakukan booking via aplikasi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- I. Favorit dan Akun (Mockup Dashboard) -->
+    <section id="akun" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Dashboard Pengguna (Mockup)</h2>
+            </div>
+            <div class="dashboard-layout">
+                <div class="sidebar">
+                    <div class="user-profile">
+                        <div class="avatar">U</div>
+                        <h3>Tu Merry</h3>
+                        <p>me398@example.com</p>
+                    </div>
+                    <ul class="dashboard-menu">
+                        <li><a href="#" class="active">Profil Saya</a></li>
+                        <li><a href="#favorit">Kos Favorit (3)</a></li>
+                        <li><a href="#">Riwayat Booking</a></li>
+                        <li><a href="#">Pengaturan Akun</a></li>
+                    </ul>
+                </div>
+                <div class="dashboard-content">
+                    <h3>Status Booking Aktif</h3>
+                    <div class="booking-card">
+                        <div class="booking-info">
+                            <h4>Kos Mawar Eksklusif</h4>
+                            <p>Check-in: 15 Okt 2026</p>
+                            <span class="badge status-waiting">Menunggu Pembayaran</span>
+                        </div>
+                        <button class="btn btn-primary btn-sm">Bayar Sekarang</button>
+                    </div>
+                    <br>
+                    <h3 id="favorit">Kos Favorit Terakhir</h3>
+                    <div class="grid dashboard-grid">
+                        <!-- Fav Card -->
+                        <div class="kos-card">
+                            <div class="kos-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=400&q=80" alt="Kos Bima">
+                                <button class="btn-fav active">❤</button>
+                            </div>
+                            <div class="kos-info">
+                                <h3 class="kos-title">Kos Bima Raya</h3>
+                                <div class="kos-price">Rp 1.200.000</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- J. Untuk Pemilik Kos -->
+    <section id="pemilik" class="section owner-cta">
+        <div class="container">
+            <div class="owner-content">
+                <h2>Kelola dan Promosikan Kosmu Lebih Mudah.</h2>
+                <p>Bergabunglah sebagai mitra Lomang Cari Kos. Perluas jangkauan promosi, tampilkan informasi kamar, perbarui ketersediaan, dan kelola booking secara lebih terstruktur.</p>
+                <a href="#pemilik" class="btn btn-light btn-lg">Pelajari untuk Pemilik Kos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- K. Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="logo">
+                    <img src="kelomang.png" alt="Logo Lomang Cari Kos" class="logo-img">
+                    <span class="logo-text" style="color: white;">Lomang Cari Kos</span>
+                </div>
+                <p>Platform pencarian kos praktis, transparan, dan terpercaya di Bali. Temukan kos impianmu bersama kami.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Eksplor</h4>
+                <ul>
+                    <li><a href="#beranda">Beranda</a></li>
+                    <li><a href="#cari-kos">Cari Kos</a></li>
+                    <li><a href="#cara-kerja">Cara Kerja</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Dukungan</h4>
+                <ul>
+                    <li><a href="#trust">Keamanan</a></li>
+                    <li><a href="#pemilik">Mitra Pemilik Kos</a></li>
+                    <li><a href="#">Pusat Bantuan</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Syarat & Ketentuan</a></li>
+                    <li><a href="#">Kebijakan Privasi</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Lomang Cari Kos.</p>
+        </div>
+    </footer>
+</body>
+</html>
